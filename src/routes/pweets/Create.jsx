@@ -1,9 +1,11 @@
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import { auth, db } from "../../firebase";
 
 const Create = () => {
   const [content, setContent] = React.useState("");
+  const navigate = useNavigate();
   const postPweet = (e) => {
     e.preventDefault();
     const {
@@ -22,6 +24,7 @@ const Create = () => {
     }).then((newDoc) => {
       console.log("New pweet ID:", newDoc.id);
       setContent("");
+      navigate("/pweets");
     });
   };
 
