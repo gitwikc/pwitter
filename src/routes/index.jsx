@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   return (
-    <div className="Home grid gap-4 h-full my-24 place-items-center">
+    <div className="Home px-4 grid gap-4 h-full my-24 place-items-center">
       <ul style={{ listStyleType: "initial" }}>
         <li>Sign in with Google to see "pweets"</li>
         <li>Click "+" to post your own pweet</li>
